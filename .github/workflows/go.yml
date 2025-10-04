@@ -3,14 +3,10 @@ name: Deploy Go App
 on:
   push:
     branches: [ "main" ]
-    branches: [ "main" ]
 
 jobs:
   deploy:
-  deploy:
     runs-on: ubuntu-latest
-
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

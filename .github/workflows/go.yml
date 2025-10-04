@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           source: "url-shortener"
-          target: "/home/deploy/app/"
+          target: "/home/deploy/url-shortener/"
 
       - name: Restart service
         uses: appleboy/ssh-action@v1.2.0
@@ -37,4 +37,5 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
-            sudo systemctl restart myapp
+            pkill url-shortener
+            ~/url-shortener

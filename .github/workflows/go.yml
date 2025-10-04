@@ -38,4 +38,4 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
             pkill url-shortener
-            ~/url-shortener
+            ~/url-shortener/url-shortener

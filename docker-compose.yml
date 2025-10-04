@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  myapp:
+    build: .
+    container_name: url-shortener
+    restart: unless-stopped
+    ports:
+      - "8082:8082"

@@ -1,10 +1,10 @@
 package main
 
 import (
+	"context"
 	"url-shortener/internal/api"
 	"url-shortener/internal/repo"
 	"url-shortener/internal/services"
-	"context"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/redis/go-redis/v9"
@@ -14,7 +14,7 @@ var ctx = context.Background()
 
 func main() {
 	db := redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
+		Addr:     "host.docker.internal:6379",
 		DB:       0,
 		Password: "",
 	})

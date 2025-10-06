@@ -14,7 +14,7 @@ var ctx = context.Background()
 
 func main() {
 	db := redis.NewClient(&redis.Options{
-		Addr:     "host.docker.internal:6379",
+		Addr:     "redis:6379",
 		DB:       0,
 		Password: "",
 	})

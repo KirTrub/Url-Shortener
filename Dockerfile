@@ -7,3 +7,4 @@ FROM alpine
 WORKDIR /app
 COPY --from=build /app/url-shortener .
 CMD ["./url-shortener"]
+EXPOSE 8082
